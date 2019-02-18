@@ -1,0 +1,43 @@
+{
+  "name": "datatable",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "datatables.net": "^1.10.19",
+    "datatables.net-bs4": "^1.10.19",
+    "datatables.net-buttons-dt": "^1.5.4",
+    "datatables.net-dt": "^1.10.19",
+    "datatables.net-editor-dt": "^1.6.3",
+    "datatables.net-fixedcolumns-dt": "^3.2.6",
+    "datatables.net-fixedheader-dt": "^3.1.5",
+    "datatables.net-responsive-dt": "^2.2.3",
+    "datatables.net-select-dt": "^1.2.7",
+    "icons-cl": "^1.0.5",
+    "jquery": "^3.3.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "2.1.3",
+    "reactstrap": "^7.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "Vuletic Vladimir",
+  "license": "ISC"
+}

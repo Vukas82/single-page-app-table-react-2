@@ -1,0 +1,41 @@
+.cancelButton {
+    padding-right: 65%;
+    float: left;
+}
+.newTag {
+    padding-top: 0.5%;
+    float: right;
+}
+.tagHeader {
+    margin-left: 500%;
+}
+.boxx {
+    float: right;
+    width: 108%;
+    height: 80px;
+    margin-top: 15px;
+    margin-right: -80px;
+    border-bottom: dotted 1px;
+
+}
+.plus {
+    float: right;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.tagsIcon {
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 400px;
+}
+.tgii{
+    float: left;
+    padding-top: 3px;
+}
+.tgi{
+    float: left;
+    margin-left: 7px;
+    padding-top: 10px;
+}
