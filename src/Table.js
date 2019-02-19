@@ -16,8 +16,6 @@ class Table extends Component {
     
         // console.log(props)  //OK
 
-        // this.props ={modalIsOpen: false,}
-
     this.state = {
         firstName: null,
         formErrors: {
@@ -33,8 +31,6 @@ class Table extends Component {
         isEdit : false,
         
     }
-                            // Instead of $('#myID').click(function(){...});
-                            // I used $('body').on('click','#myID',function(){});
                         
 }
     componentDidMount = () => {
@@ -103,7 +99,7 @@ class Table extends Component {
                     $(this).css('margin', 0).css('float','left');
                 });
 
-                    // show entries promena diva i mesta u dom-u 
+                    // show entries chande div and spot in dom 
                 $(init);
                 function init () { 
                 $('#myTable_wrapper > div:nth-child(3) > div.col-sm-12.col-md-5').append( $('#myTable_length label'));
@@ -123,6 +119,7 @@ class Table extends Component {
                 function init5 () {
                 $('#myTable_wrapper > div:nth-child(1) > div:nth-child(1)').remove();
                 }
+                // Setup - add a text input to each header cell
 
                 var r = $('#myTable thead tr',);
                 r.find('th').each(function(){
@@ -130,9 +127,8 @@ class Table extends Component {
                 });
                 $('#myTable thead').append(r);
                 $('#search_0').css('text-align', 'center');
-               
 
-           // Setup - add a text input to each header cell   ne reorderuje klikom na input heder nejm u inpitu!!!! radi
+           
            $('#myTable thead th').each(function() {
             var title = $('#myTable thead th').eq($(this).index()).text();
             $(this).html('<input type="text" placeholder="&#xF002; '+ title +'" style="font-family:Arial, FontAwesome" />');
@@ -141,7 +137,7 @@ class Table extends Component {
         // DataTable
         var table = $('#myTable').DataTable();
         
-        // Apply the search
+        // Apply the search in header
         table.columns().eq(0).each(function(colIdx) {
             $('input', table.column(colIdx).header()).on('keyup change', function() {
                 table
