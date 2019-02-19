@@ -11,8 +11,12 @@ $.DataTable = require( 'datatables.net-bs4' );
 
 class Table extends Component {
     constructor(props) {
+        console.log(props)
         super(props);
     
+        // console.log(props)  //OK
+
+        // this.props ={modalIsOpen: false,}
 
     this.state = {
         firstName: null,
@@ -29,6 +33,9 @@ class Table extends Component {
         isEdit : false,
         
     }
+                            // Instead of $('#myID').click(function(){...});
+                            // I used $('body').on('click','#myID',function(){});
+                        
 }
     componentDidMount = () => {
 
@@ -36,10 +43,11 @@ class Table extends Component {
 
              // edit/send value in tagModal
 
-                    $('.edit').click(function(){ 
-                        this.setState({
-                            modalIsOpen: !this.state.modalIsOpen  // ????? ovde je greska
-                        })
+                    $('body').on( 'click', '.edit', function(){ console.log('nesto')
+                        // this.setState({
+                            // this.props.modalIsOpen = !this.props.modalIsOpen  // ????? ovde je greska
+                            console.log(this.props)
+                        // })
                          $('#myTable tr ').click(function() {       
                              
                             var table = $('#myTable').DataTable();
@@ -156,9 +164,9 @@ class Table extends Component {
                   { title: 'Tag ID'},
                   { title: 'Tag Name'},
                   { title: 'Tag Type'},
-                  { title: 'My Feed.', "render": () => { return '<span>&#x271a;</span>'; }},
-                  { title: 'My Favourites', "render": () => { return '<span>&#x271a;</span>'; }},
-                  { title: 'Action', "render": () => { return ' <span class="edit" onClick={this.onClick}>&#x270f;</span> &nbsp &nbsp<span class="delrow">&#x271a;</span>' }},//{return '<button id="span">btn</button>';}}, //{ return '<span id="span">&#x270f;</span><span>&#x271a;</span>'; }}
+                  { title: 'My Feed.', "render": () => { return '<span><i class="fa fa-check"></i></span>'; }},
+                  { title: 'My Favourites', "render": () => { return '<span><i class="fa fa-check"></i></span>'; }},
+                  { title: 'Action', "render": () => { return ' <span class="edit" onClick={this.onClick}><i class="fa fa-pencil"></i></span> &nbsp &nbsp<span class="delrow"><i class="fa fa-close"></i></span>' }},//{return '<button id="span">btn</button>';}}, //{ return '<span id="span">&#x270f;</span><span>&#x271a;</span>'; }}
               ],
           },               
         );

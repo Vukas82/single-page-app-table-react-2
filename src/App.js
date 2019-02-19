@@ -12,16 +12,17 @@ class App extends Component {
     super(props);
 
     this.state = {
-      posts: dataValue
+      posts: dataValue,
+      modalIsOpen: false,
     }
 
   }
    dataValue = data;
-  
   render() {
     return (
       <div className="App">
       <Table data={this.dataValue}
+             modalStatus = {this.state.modalIsOpen}
       ></Table>
       </div>
     );
