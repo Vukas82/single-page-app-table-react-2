@@ -136,6 +136,7 @@ class Table extends Component {
         
         // DataTable
         var table = $('#myTable').DataTable();
+      
         
         // Apply the search in header
         table.columns().eq(0).each(function(colIdx) {
@@ -150,6 +151,7 @@ class Table extends Component {
                 e.stopPropagation();
             });
         });
+
     } );
       
         this.$el = $(this.el)
@@ -158,7 +160,7 @@ class Table extends Component {
               
               columns:[
                   { title: 'Tag ID'},
-                  { title: 'Tag Name'},
+                  { title: 'Tag Name', "render":function ( data, type, row ) { return ' <span class="edit" onClick={this.onClick}><p class="blue">'+data+'</p></span>' }},
                   { title: 'Tag Type'},
                   { title: 'My Feed.', "render": () => { return '<span><i class="fa fa-check"></i></span>'; }},
                   { title: 'My Favourites', "render": () => { return '<span><i class="fa fa-check"></i></span>'; }},
